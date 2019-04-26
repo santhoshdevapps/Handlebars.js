@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Instagram</title>
+    <!-- bulma -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css">
+    <!-- your custom css goes here -->
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <style type="text/css">
+     .logo {
+       max-width:200px;
+     }
+     #loginBox {
+       background-color:#FFFFFF;
+       border:1px solid #E6E6E6;
+       padding:40px 20px;
+     }
+     /* navbar items */
+     div.hero-foot .navbar-item {
+       font-size:13px;
+     }
+     div.hero-foot .navbar {
+       max-width:50%;
+       margin: 0 auto;
+     }
+     div#results {
+       color:red;
+     }
+    </style>
+  </head>
+  <body>
+
+    <section class="hero is-fullheight" id="loginSection">
+      <div class="hero-body">
+        <div class="container">
+          <div class="columns is-centered">
+            <div class="column is-3" id="loginBox">
+              <p class="has-text-centered">
+                <img src="instagram-logo.svg" class="logo"> <br>
+              </p>
+              <div class="field">
+                <div class="control">
+                  <input type="text" placeholder="Enter your username" class="input" id="usernameBox">
+                </div>
+              </div> <!-- field -->
+              <div class="field">
+                <div class="control">
+                  <input type="text" placeholder="Password" class="input" id="passwordBox">
+                </div>
+              </div> <!-- field -->
+              <a href="#" class="button is-info is-fullwidth" id="loginButton"> Log in </a>
+              <div id="results"></div>
+              <hr>
+              <p class="has-text-centered">
+                <a href="#" class="dark-blue"> Log in with Facebook </a>
+              </p>
+            </div> <!-- .is-4 -->
+          </div> <!-- columns -->
+      </div> <!-- container -->
+      </div> <!-- hero-body -->
+
+      <div class="hero-foot">
+        <nav class="navbar">
+          <div class="navbar-menu">
+            <div class="navbar-start">
+                <a href="#" class="navbar-item dark-blue is-uppercase">
+                  About Us
+                </a>
+                <a href="#" class="navbar-item dark-blue is-uppercase">
+                  Support
+                </a>
+                <a href="#" class="navbar-item dark-blue is-uppercase">
+                  Press
+                </a>
+                <a href="#" class="navbar-item dark-blue is-uppercase">
+                  API
+                </a>
+                <a href="#" class="navbar-item dark-blue is-uppercase">
+                  JOBS
+                </a>
+                <a href="#" class="navbar-item dark-blue is-uppercase">
+                  PRIVACY
+                </a>
+                <a href="#" class="navbar-item dark-blue is-uppercase">
+                  TERMS
+                </a>
+            </div> <!-- // navbar-start -->
+            <div class="navbar-end">
+              <div class="navbar-item">
+                &copy; 2019 INSTAGRAM
+              </div>
+            </div>
+          </div> <!-- // navbar-menu -->
+        </nav> <!-- // navbar -->
+      </div> <!-- // .hero-foot -->
+
+    </section>
+
+    <!-- jquery -->
+    <script src= "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <!-- handlebars -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.2/handlebars.js"></script>
+    <!-- your custom javascript file -->
+    <script src="js/login.js"></script>
+
+  </body>
+</html>

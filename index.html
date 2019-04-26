@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>repl.it</title>
+    <!-- bulma -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css">
+    <!-- your custom css goes here -->
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <style type="text/css">
+     div {
+       /* border:1px solid red; */
+     }
+     nav#header-menu {
+       padding-top:25px;
+       background-color:#ffffff;
+     }
+     div#followers, div#userDetails {
+       margin-top:20px;
+     }
+     .h1text {
+       font-size:28px;
+     }
+     section#userInfoSection, section#photoGridSection {
+       margin-top:30px;
+     }
+     footer#footer-menu {
+       height:50px;
+     }
+     footer#footer-menu nav {
+       background-color:#FAFAFA;
+     }
+    </style>
+  </head>
+  <body>
+
+    <!-- instagram menu -->
+
+    <nav id="header-menu">
+      <div class="columns is-centered">
+        <div class="column is-3">
+          <img src="img/logos/logo2.png">
+        </div> <!-- column -->
+        <div class="column is-3">
+          <div class="field">
+            <div class="control">
+              <input type="search" class="input" placeholder="Enter search term">
+            </div> <!-- ./control -->
+          </div> <!-- ./field -->
+
+        </div>
+        <div class="column has-text-right is-3">
+          <button class="button is-info">Login </button>
+          <button class="button is-info is-outlined">Sign Up</button>
+        </div>
+      </div> <!-- //.columns -->
+    </nav>
+
+
+    <section id="userInfoSection">
+      <div class="container" id="userinfoContainer">
+       
+      </div>
+    </section>
+
+    <!-- this section is for the photos -->
+    <section id="photoGridSection">
+      <div class="container">
+        <div class="columns is-multiline" id="photoGridContainer">
+        </div> <!--//.columns -->
+      </div> <!-- //.container -->
+    </section>
+
+
+    <!-- FOOTER MENU -->
+
+    <footer class="footer" id="footer-menu">
+      <nav class="navbar">
+        <div class="navbar-menu">
+          <div class="navbar-start">
+              <a href="#" class="navbar-item dark-blue is-uppercase">
+                About Us
+              </a>
+              <a href="#" class="navbar-item dark-blue is-uppercase">
+                Support
+              </a>
+              <a href="#" class="navbar-item dark-blue is-uppercase">
+                Press
+              </a>
+              <a href="#" class="navbar-item dark-blue is-uppercase">
+                API
+              </a>
+              <a href="#" class="navbar-item dark-blue is-uppercase">
+                JOBS
+              </a>
+              <a href="#" class="navbar-item dark-blue is-uppercase">
+                PRIVACY
+              </a>
+              <a href="#" class="navbar-item dark-blue is-uppercase">
+                TERMS
+              </a>
+          </div> <!-- // navbar-start -->
+          <div class="navbar-end">
+            <div class="navbar-item">
+              &copy; 2019 INSTAGRAM
+            </div>
+          </div>
+        </div> <!-- // navbar-menu -->
+      </nav> <!-- // navbar -->
+    </footer>
+
+
+    <script id="userdetails-tpl" type="text/x-handlebars-template">
+
+          <div class="columns is-centered">
+      <div class="column is-3 has-text-right">
+        <img src="img/{{uname}}/logo.png">
+      </div>
+      <div class="column is-8">
+        <h1 class="h1text">
+          {{uname}}
+          &nbsp;&nbsp;&nbsp;&nbsp;
+          <button class="button is-info">Follow</button>
+        </h1>
+        <div id="followers">
+          <span class="has-text-weight-bold">{{numOfPosts}}</span> posts
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <span class="has-text-weight-bold">{{numOfFollowers}}</span> followers
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <span class="has-text-weight-bold">{{numOfFollowing}}</span> following
+        </div>
+        <div id="userDetails">
+            <span class="has-text-weight-bold">{{firstName}}</span> <br>
+            {{ description }} <br>
+            <a href="{{anchorLink}}">{{anchorLink}}</a> <br>
+        </div>
+      </div>
+    </div>
+    </script>
+
+    <script id="photos-tpl" type="text/x-handlebars-template">
+          {{#photos}}
+        <div class="column is-4">
+          <figure class="image is-256x256">
+            <img src="img/{{username}}/{{filename}}">
+          </figure>
+        </div>
+      {{/photos}}
+
+    </script>
+
+
+
+
+    <!-- jquery -->
+    <script src= "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <!-- handlebars -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.2/handlebars.js"></script>
+    <!-- your custom javascript file -->
+    <script src="js/index.js"></script>
+
+  </body>
+</html>
