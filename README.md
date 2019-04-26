@@ -12,7 +12,7 @@ A clone of Instagram website
 
 
 ## General info
-Simple replica of chrome extension Momentum.
+Simple replica of Instagram website.
 
 ## Students info
 Students worked in the project:
