@@ -40,8 +40,5 @@ $ php -S localhost:<PORTNUMBER>(php is required) or Run the index.html file in a
 ```
 
 ## A static screenshot of the main screen of app
-![screenshot of the main screen](/screenshots/FirstPage.png)
-
-## A sample video demo of main features of app
-![video demo of the Momentum project](/screenshots/VideoDemo.gif)
+![screenshot of the main screen](/screenshot/homepage-screenshot.png)
 
